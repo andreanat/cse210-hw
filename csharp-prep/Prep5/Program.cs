@@ -23,17 +23,17 @@ class Program
         return Console.ReadLine();
     }
     static int PromptUserNumber(){
-        do
-        {
             Console.Write("Please enter your favorite number: ");
             int number = int.Parse(Console.ReadLine());
             return number;
         } 
+    static int SquareNumber(int number){
+        return number * number;
     }
-    static int SquareNumber(){
+    static void DisplayResult(string userName, int squaredNumber)
+    {
+        Console.WriteLine($"Hello, {userName}! Your favorite number squared is {squaredNumber}.");
+    }
 
-    }
-    static void DisplayResult(){
+}
 
-    }
-    }
