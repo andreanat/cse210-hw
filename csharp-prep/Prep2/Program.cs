@@ -4,30 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Pleas introduce your grade for the course: ");
-        if (double.TryParse(Console.ReadLine(), out double score))
-        {
-            string grade = Grade(score);
-            Console.WriteLine($"Your letter grade for the course is: {grade}");
-        }
-    
-            if (Message(letter))
-            {
-                Console.WriteLine("Congratulations! You passed the course.");
-            }
-            else
-            {
-                Console.WriteLine("Keep working hard. You can do better next time!");
-            }
-        else
-        {
-            Console.WriteLine("Invalid input. Please enter a valid numeric score.");
-        }
-    }
+        Console.Write("Please introduce your grade for the course: ");
+        string grade = Console.ReadLine();
+        int score = int.Parse(grade);
 
-    static string CalculateGrade(double score)
-    {
-        string letter;
+        string letter = "";
 
         if (score >= 90)
         {
@@ -50,6 +31,15 @@ class Program
             letter = "F";
         }
 
-        return letter;
+        Console.WriteLine($"Your grade is: {letter}");
+
+        if (score >= 70)
+        {
+            Console.WriteLine("Congratulations! Keep up the hard work.");
+        }
+        else
+        {
+            Console.WriteLine("Keep working hard. You can do better next time!");
+        }
     }
 }
