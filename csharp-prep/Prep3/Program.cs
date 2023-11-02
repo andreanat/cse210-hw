@@ -19,6 +19,7 @@ class Program
             if (guess < magicNumber)
             {
                 Console.WriteLine("Try guessing higher.");
+
             }
             else if (guess > magicNumber)
             {
