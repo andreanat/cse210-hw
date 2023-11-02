@@ -11,5 +11,8 @@ class Program
         // Prompt the user for their last name
         Console.Write("Please enter your last name: ");
         string lastName = Console.ReadLine();
+
+        //James Bond 
+        Console.WriteLine($"Your name is {lastName} , {firstName} {lastName}");
     }
 }
