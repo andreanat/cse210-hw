@@ -13,6 +13,6 @@ class Program
         string lastName = Console.ReadLine();
 
         //James Bond 
-        Console.WriteLine($"Your name is {lastName} , {firstName} {lastName}");
+        Console.WriteLine($"Your name is {lastName}, {firstName} {lastName}");
     }
 }
