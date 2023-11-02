@@ -10,47 +10,46 @@ class Program
             string grade = Grade(score);
             Console.WriteLine($"Your letter grade for the course is: {grade}");
         }
+    
+            if (Message(letter))
+            {
+                Console.WriteLine("Congratulations! You passed the course.");
+            }
+            else
+            {
+                Console.WriteLine("Keep working hard. You can do better next time!");
+            }
         else
         {
             Console.WriteLine("Invalid input. Please enter a valid numeric score.");
         }
+    }
 
-
-    static string Grade(double score)
+    static string CalculateGrade(double score)
     {
+        string letter;
+
         if (score >= 90)
         {
-            return "A";
+            letter = "A";
         }
         else if (score >= 80)
         {
-            return "B";
+            letter = "B";
         }
         else if (score >= 70)
         {
-            return "C";
+            letter = "C";
         }
         else if (score >= 60)
         {
-            return "D";
+            letter = "D";
         }
         else
         {
-            return "F";
+            letter = "F";
         }
-    }
-  }
-     static string Message(string grade)
-    {
-        string message;
-        if (grade != "F")
-        {
-            message = "Congratulations! Keep up the hard work.";
-        }
-        else
-        {
-            message = "Keep working hard.";
-        }
-        return message;
+
+        return letter;
     }
 }
