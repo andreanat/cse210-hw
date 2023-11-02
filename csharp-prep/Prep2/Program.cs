@@ -15,15 +15,6 @@ class Program
             Console.WriteLine("Invalid input. Please enter a valid numeric score.");
         }
 
-         if (Message(grade))
-            {
-                Console.WriteLine("Congratulations! Keep up the good work.");
-            }
-            else
-            {
-                Console.WriteLine("Keep working hard. You can do better next time!");
-            }
-    }
 
     static string Grade(double score)
     {
@@ -48,16 +39,18 @@ class Program
             return "F";
         }
     }
-      static string Message(string grade)
+  }
+     static string Message(string grade)
     {
         string message;
         if (grade != "F")
         {
-            message = "Congratulations! You passed the course.";
+            message = "Congratulations! Keep up the hard work.";
         }
         else
         {
-            message = "Keep working hard. You can do better next time!";
+            message = "Keep working hard.";
         }
         return message;
+    }
 }
