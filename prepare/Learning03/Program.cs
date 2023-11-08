@@ -21,11 +21,11 @@ class Fraction{
         _top = _top1;
         _bottom = _bottom1;
     }
-    public int GetFractionString(){
+    public string GetFractionString(){
         string text = $"{_top}/{_bottom}";
         return text;
     }
-    public int GetDecimalValue(){
+    public Double GetDecimalValue(){
         return (double)_top / (double)_bottom;
 
     }
