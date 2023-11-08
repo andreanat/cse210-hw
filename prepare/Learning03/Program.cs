@@ -1,10 +1,4 @@
 using System;
-class Program
-{
-    static void Main(string[] args)
-    {
-    }
-}
 
 class Fraction{
     private int _top;
@@ -34,5 +28,11 @@ class Fraction{
     public Double GetDecimalValue(){
         return (double)_top / (double)_bottom;
 
+    }
+    
+    public static void Main(string[] args)
+    {
+        // Your program's entry point
+        // Create instances of Fraction and perform any desired operations here
     }
 }
