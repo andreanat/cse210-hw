@@ -32,7 +32,6 @@ class Fraction{
     
     public static void Main(string[] args)
     {
-        // Your program's entry point
-        // Create instances of Fraction and perform any desired operations here
+
     }
 }
