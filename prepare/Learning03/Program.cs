@@ -1,4 +1,10 @@
 using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+    }
+}
 
 class Fraction{
     private int _top;
