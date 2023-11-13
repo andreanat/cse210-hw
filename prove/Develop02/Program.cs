@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic; //I added this line bc I couldnt make the program work
 
 public class JournalEntry
 {
@@ -21,31 +22,23 @@ public class JournalEntry
 
 public class Journal
 {
-    private JournalEntry[] _entries;
-    private int _count;
+    private List<JournalEntry> _entries;
 
     public Journal()
     {
-        
+        _entries = new List<JournalEntry>(); 
     }
 
     public void AddEntry(JournalEntry newEntry)
     {
-        if (_count < _entries.Length)
-        {
-            _entries[_count++] = newEntry;
-        }
-        else
-        {
-            Console.WriteLine("Journal is full. Cannot add more entries.");
-        }
+        _entries.Add(newEntry);
     }
 
     public void DisplayAll()
     {
-        for (int i = 0; i < _count; i++)
+        foreach (var entry in _entries)
         {
-            _entries[i].Display();
+            entry.Display();
         }
     }
 
@@ -55,9 +48,9 @@ public class Journal
         {
             using (var writer = new System.IO.StreamWriter(file))
             {
-                for (int i = 0; i < _count; i++)
+                foreach (var entry in _entries)
                 {
-                    writer.WriteLine($"{_entries[i].Date},{_entries[i].PromptText},{_entries[i].EntryText}");
+                    writer.WriteLine($"{entry.Date},{entry.PromptText},{entry.EntryText}");
                 }
             }
 
@@ -71,8 +64,6 @@ public class Journal
 
     public void LoadFromFile(string file)
     {
-        _count = 0;
-
         try
         {
             string[] lines = System.IO.File.ReadAllLines(file);
