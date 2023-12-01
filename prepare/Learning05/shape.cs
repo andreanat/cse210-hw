@@ -1,21 +1,23 @@
 using System;
 
-public class Shape
+public abstract class Shape
 {
-    private string color; 
-
-    public string Color
-    {
-        get { return color; }
-        set { color = value; }
-    }
+    private string _color;
 
     public Shape(string color)
     {
-        this.color = color;
+        _color = color;
     }
-    public virtual double GetArea()
+
+    public string GetColor()
     {
-        return 0;
+        return _color;
     }
+
+    public void SetColor(string color)
+    {
+        _color = color;
+    }
+    public abstract double GetArea();
+
 }
