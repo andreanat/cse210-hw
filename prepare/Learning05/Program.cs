@@ -2,12 +2,12 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Square mySquare = new Square("Blue", 8.0);
+        Square square = new Square("Red", 5.0);
 
-        Console.WriteLine($"Square color: {square.Color}");
-        Console.WriteLine($"Square area: {square.GetArea()}");
+        Console.WriteLine($"Color: {square.Color}");
+        Console.WriteLine($"Area: {square.GetArea()}");
 
 
     }
