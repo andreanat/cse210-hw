@@ -6,11 +6,8 @@ class Program
     {
         Square mySquare = new Square("Blue", 8.0);
 
-        string squareColor = mySquare.Color;
-        Console.WriteLine($"Square color: {squareColor}");
-
-        double squareArea = mySquare.GetArea();
-        Console.WriteLine($"Square area: {squareArea}");
+        Console.WriteLine($"Square color: {square.Color}");
+        Console.WriteLine($"Square area: {square.GetArea()}");
 
 
     }
