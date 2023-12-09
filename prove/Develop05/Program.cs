@@ -1,9 +1,8 @@
-using System;
-
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        
+        GoalManager goalManager = new GoalManager();
+        goalManager.Start();
     }
 }
