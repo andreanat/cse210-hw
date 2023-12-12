@@ -29,7 +29,7 @@ class Program
         string userInput;
         do
         {
-            Console.WriteLine("\nType 'quit' to exit or press Enter to continue revealing words:");
+            Console.WriteLine("\nType 'quit' to exit");
             userInput = Console.ReadLine();
         } while (!userInput.ToLower().Equals("quit"));
     }
